@@ -1,79 +1,21 @@
-﻿﻿// // Задача №46
-// // Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+﻿﻿// Задача №48
+// Задайте двумерный массив размера m на n, каждый
+// элемент в массиве находится по формуле: Aₘₙ =
+// m+n. Выведите полученный массив на экран.
+// Пример:
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
 
-
-// ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue,ConsoleColor.Cyan,
-//                                         ConsoleColor.DarkBlue,ConsoleColor.DarkCyan,ConsoleColor.DarkGray,
-//                                         ConsoleColor.DarkGreen,ConsoleColor.DarkMagenta,ConsoleColor.DarkRed,
-//                                         ConsoleColor.DarkYellow,ConsoleColor.Gray,ConsoleColor.Green,
-//                                         ConsoleColor.Magenta,ConsoleColor.Red,ConsoleColor.White,
-//                                         ConsoleColor.Yellow};
-
-// //1) Получение данных от пользователя
-// int n = InputNum("Количество строк матрицы");
-// int m = InputNum("Количество строк матрицы");
-
-// //2) Генерация двумерного массива
-// int[,] matix = FillTwoDimArray(n,m);
-
-// //3) Печатаем двумерный массив
-// PrintTwoDimArray(matix);
-
-
-// int InputNum(string msg)
-// {
-//     Console.Write(msg);
-//     return int.Parse(Console.ReadLine() ?? "0");
-// }
-
-// // метод для заполнения двумерного массива
-// int[,] FillTwoDimArray(int countRow, int countColumn)
-// {
-//     System.Random numberSyntezator = new System.Random();
-//     int i = 0; int j = 0;
-//     int[,] outArray = new int[countRow, countColumn];
-//     while (i < countRow)
-//     {
-//         j = 0;
-//         while (j < countColumn)
-//         {
-//             outArray[i, j] = numberSyntezator.Next(0, 101);
-//             j++;
-//         }
-//         i++;
-//     }
-//     return outArray;
-// }
-
-
-// //метод для печати двумерного массива
-// void PrintTwoDimArray(int[,] inputArray)
-// {
-//     int i = 0; int j = 0;
-
-//     while (i < inputArray.GetLength(0))
-//     {
-//         j = 0;
-//         while (j < inputArray.GetLength(1))
-//         {
-//             Console.ForegroundColor = (ConsoleColor)(new System.Random().Next(0,16));
-//             //col[new System.Random().Next(0,16)]; 
-//             Console.Write(inputArray[i, j] + " ");
-//             Console.ResetColor(); 
-//             j++;
-//         }
-//         //Console.Write("\n");
-//         Console.WriteLine();
-//         i++;
-//     }
-// }
-
+//метод ввода данных
 int InputNum(string msg)
 {
     Console.Write(msg);
     return int.Parse(Console.ReadLine() ?? "0");
 }
 
+//создать массив
 int[,] CreateArray(int xlen, int ylen)
 {
     int[,] arr = new int[ylen, xlen];
@@ -87,7 +29,8 @@ int[,] CreateArray(int xlen, int ylen)
     return arr;
 }
 
-void ShowArray(int[,] arr)
+//показать массив
+void ShowArray(int[,] arr) //переменные называем с маленькой буквы, а методы с большой
 {
     for (int i = 0; i <= arr.GetUpperBound(0); i++)
     {
@@ -99,7 +42,7 @@ void ShowArray(int[,] arr)
     }
 }
 
-int xlen = InputNum("Ваше число столбцов:");
-int ylen = InputNum("Ваше число строк:");
-int[,] matrix = CreateArray(xlen, ylen);
-ShowArray(matrix);
+int xlen = InputNum("Ваше число столбцов:"); //просим ввести число
+int ylen = InputNum("Ваше число строк:"); //просим ввести число
+int[,] matrix = CreateArray(xlen, ylen); //создали массив
+ShowArray(matrix); //напечатали массив
