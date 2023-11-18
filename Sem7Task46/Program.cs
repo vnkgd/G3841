@@ -6,6 +6,7 @@
 // 5 -2 33 -2
 // -77 3 8 1
 
+//разукрашиваем масси
 ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue,ConsoleColor.Cyan,
                                         ConsoleColor.DarkBlue,ConsoleColor.DarkCyan,ConsoleColor.DarkGray,
                                         ConsoleColor.DarkGreen,ConsoleColor.DarkMagenta,ConsoleColor.DarkRed,
@@ -60,10 +61,10 @@ void PrintTwoDimArray(int[,] inputArray)
         j = 0;
         while (j < inputArray.GetLength(1))
         {
-            Console.ForegroundColor = (ConsoleColor)(new System.Random().Next(0,16));
+            Console.ForegroundColor = (ConsoleColor)(new System.Random().Next(0,16)); //вызывается свойство консоли красить разными цветами, рандомный выбор цвета
             //col[new System.Random().Next(0,16)]; 
-            Console.Write(inputArray[i, j] + " ");
-            Console.ResetColor(); 
+            Console.Write(inputArray[i, j] + " "); //печатаем наш элемент
+            Console.ResetColor(); //сбрасываем цвет до начального
             j++;
         }
         //Console.Write("\n");
