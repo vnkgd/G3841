@@ -14,33 +14,26 @@ if (inputNum != null)
         Console.Write(i - num);
         Console.Write(", ");
     }
+    Console.Write(num);
 }
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-
-
-
-// Console.Write("Введите число дня недели: "); //выводим интерактивное сообщение для пользователя
-// //Console.WriteLine();//перевод на новую строчку
-// string? inputLine = Console.ReadLine(); //считываем данные с консоли 1е число
-// if(inputLine != null) //Проверяем, чтобы данные были не пустыми.
+// //Считываем данные с консоли
+// string? imputNumLine = Console.ReadLine();
+// // Проверяем, чтобы данные не были пустыми
+// if (imputNumLine != null)
 // {
-//     string[] dayofweek = new string[7];//создаём массив из дней недели.
-//     dayofweek[0] = "Понедельник";
-//     dayofweek[1] = "Вторник";
-//     dayofweek[2] = "Среда";
-//     dayofweek[3] = "Четверг";
-//     dayofweek[4] = "Пятница";
-//     dayofweek[5] = "Суббота";
-//     dayofweek[6] = "Воскресенье";
-
-// int inputNumber = int.Parse(inputLine); //Парсим введённое число.
-
-// string outDayofWeek = dayofweek[inputNumber-1]; //Находим название дня недели по введённому номеру
-
-// Console.WriteLine(outDayofWeek); //выводим данные в консоль
-
+//     // Парсим введенное число
+//     int imputNumberA = int.Parse(imputNumLine);
+//     // Вводим промежуточное значение
+//     int imputNumberC = imputNumberA * (-1);
+//     // Выходные значения
+//     string outNumLine = string.Empty;
+//     //
+//     while (imputNumberC < imputNumberA)
+//     {
+//         outNumLine = outNumLine + imputNumberC + ",";
+//         imputNumberC = imputNumberC + 1;
+//     }
+//     outNumLine = outNumLine + imputNumberA;
+//     Console.WriteLine(outNumLine);
 // }
-
