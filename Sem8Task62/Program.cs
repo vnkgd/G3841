@@ -60,16 +60,16 @@ void PrintArray(int[,] array)
 
 // DateTime d2 = DateTime.Now;
 // int[,] matrix2 = MakeSpiralMatrix(size);
-// PrintResult("Решение Михаил" + (DateTime.Now - d2));
+// PrintResult("Вариант 3" + (DateTime.Now - d2));//при больших размерах более быстрый
 
 // DateTime d3 = DateTime.Now;
 // int[,] matrix3 = FillSpiralMatrix(size);
-// PrintResult("Решение Николай" + (DateTime.Now - d3));
+// PrintResult("Вариант 4" + (DateTime.Now - d3));//при маленьких размерах быстрее
 
 // int[,] NewMatrix = InitMatrix(size, size);
 // DateTime d1 = DateTime.Now;
 // int[,] matrix1 = FillSpiral(NewMatrix);
-// PrintResult("Решение Андрей" + (DateTime.Now - d1));
+// PrintResult("Вариант 5" + (DateTime.Now - d1));//при средних размерах быстрее
 
 // // Метод, принимает строку, выводит в консоль
 // static void PrintResult(string line)
@@ -196,7 +196,7 @@ void PrintArray(int[,] array)
 
 //     return matrix;
 
-}
+//}
 
 
 // //Вариант 4
@@ -225,7 +225,7 @@ void PrintArray(int[,] array)
 //     return sqareMatrix;
 // }
 
-// //Вариант 4
+// //Вариант 5
 // int[,] InitMatrix(int rows, int columns)
 // { return new int[rows, columns]; }
 
