@@ -30,8 +30,8 @@ long MyPow(int a, int b)
     return MyPow(a,b/2)*MyPow(a,b/2); //рекурентный вызов только половинки.
 }
 
-int numberA = ReadData("Enter number A: ");
-int numberB = ReadData("Enter number B: ");
+int numberA = ReadData("Введите число A: ");
+int numberB = ReadData("Введите число B: ");
 
 long res1 =0;
 long res2 =0;
